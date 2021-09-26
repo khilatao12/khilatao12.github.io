@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+<link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="maldives">
+            <h1><span class="fab fa-ethereum"></span> Maldives</h1>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>    
+                <li>
+                    <a href="#" class="active"><span class="las la-bell"></span><span>Orders</span></a>
+                </li>
+                <li>
+                    <a href="project.html"><span class="las la-home"></span><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="las la-calendar-plus"></span><span>Add Hotel</span></a>
+                <li>
+                    <a href="#"><span class="las la-poll"></span><span>Deals</span></a>
+                </li>    
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <p class="footer-content">Maldives Hotels Admin Dashboard</p>
+            <p class="real">©2021 All Rights Reserved</p>
+        </div>
+    </div>
+    <div class="main-content">
+    <header>
+        <h2>
+            
+            <label for="">
+                <span class="fab fa-ethereum"></span>
+            </label>
+            Dashboard
+        
+        </h2>
+
+        <div class="search">
+            <span class="las la-search"></span>
+            <input type="serch" placeholder="Search here">
+        </div>
+
+        <div class="user">
+            <img src="https://freerangestock.com/sample/116135/handsome-man-avatar-.jpg" height="40px" width="40px" alt="">
+            <div>
+                <h4>Nam Phong</h4>
+                <small>Admin</small>
+            </div>
+            <div class="drop-down">
+                <span class="fas fa-caret-down"></span>
+                <div class="char-setting">
+                    <ul>
+                        <li><a href="#"><span class="fas fa-cog"></span><span>Settings</span></a></li>
+                        <li><a href="#"><span class="fas fa-question-circle"></span><span>Helps</span></a></li>
+                        <li><a href="#"><span class="fas fa-sign-out-alt"></span><span>Sign Out</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="cards">
+            <div class="card-single">
+                <div class="data">
+                    <h1>0</h1>
+                    <span>Customers</span>
+                </div>
+                <div>
+                    <span class="las la-users"></span>
+                </div>
+            </div>
+            <div class="card-single">
+                <div class="data">
+                    <h1>0</h1>
+                    <span>Deals</span>
+                </div>
+                <div>
+                    <span class="las la-clipboard"></span>
+                </div>
+            </div>
+            <div class="card-single">
+                <div class="data">
+                    <h1>0</h1>
+                    <span>Orders</span>
+                </div>
+                <div>
+                    <span class="las la-shopping-bag"></span>
+                </div>
+            </div>
+        </div>
+        <div class="orders">
+                
+                    <div class="title">
+                        <div class="padding">
+                        <h2>Recent Orders</h2>
+                    </div></div>
+
+                    <div class="body">
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Customer</td>
+                                    <td>Hotels</td>
+                                    <td>Date & Time</td>
+                                    <td>Status</td>
+                                    <td>Contact</td>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="customer"><img src="https://freerangestock.com/sample/116135/handsome-man-avatar-.jpg" width="40px" height="40px" alt="">
+                                        Nam Phong</td>
+                                    <td class="td-hotel">Arena Beach Hotel</td>
+                                    <td>25/9/2021</td>
+                                    <td class="td-status"><span class="status green"></span> online</td>
+                                    <td class="contact">
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </td>
+                                    <td class="td-button"><button class="accept">Accept</button>
+                                    <button class="reject">Reject</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="customer"><img src="https://freerangestock.com/sample/116135/handsome-man-avatar-.jpg" width="40px" height="40px" alt="">
+                                        Nam Phong</td>
+                                    <td class="td-hotel">Arena Beach Hotel</td>
+                                    <td>25/9/2021</td>
+                                    <td class="td-status"><span class="status blue"></span> away</td>
+                                    <td class="contact">
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </td>
+                                    <td class="td-button"><button class="accept">Accept</button>
+                                        <button class="reject">Reject</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="customer"><img src="https://freerangestock.com/sample/116135/handsome-man-avatar-.jpg" width="40px" height="40px" alt="">
+                                        Nam Phong</td>
+                                    <td class="td-hotel">Arena Beach Hotel aaaa aaaa aaaaa aaaa aaa</td>
+                                    <td>25/9/2021</td>
+                                    <td class="td-status"><span class="status orange"></span> busy</td>
+                                    <td class="contact">
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </td>
+                                    <td class="td-button"><button class="accept">Accept</button>
+                                        <button class="reject">Reject</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="customer"><img src="https://freerangestock.com/sample/116135/handsome-man-avatar-.jpg" width="40px" height="40px" alt="">
+                                        Nam Phong</td>
+                                    <td class="td-hotel">Arena Beach Hotel</td>
+                                    <td>25/9/2021</td>
+                                    <td class="td-status"><span class="status green"></span> online</td>
+                                    <td class="contact">
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </td>
+                                    <td class="td-button"><button class="accept">Accept</button>
+                                        <button class="reject">Reject</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="customer"><img src="https://freerangestock.com/sample/116135/handsome-man-avatar-.jpg" width="40px" height="40px" alt="">
+                                        Nam Phong</td>
+                                    <td class="td-hotel">Arena Beach Hotel</td>
+                                    <td>25/9/2021</td>
+                                    <td class="td-status"><span class="status blue"></span> away</td>
+                                    <td class="contact">
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </td>
+                                    <td class="td-button"><button class="accept">Accept</button>
+                                        <button class="reject">Reject</button></td>
+                                </tr>
+                                
+                            </tbody>    
+                        </table>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

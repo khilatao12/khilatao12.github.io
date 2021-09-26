@@ -1,0 +1,268 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .sidebar{
+    width: 345px;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    background-color: #696f7a;
+  }
+  .maldives{
+      height: 90px;
+      padding: 1rem 0rem 1rem 2rem;
+      color: #fff;
+  }
+  .sidebar span{
+      display: inline-block;
+      padding-right: 1rem;
+      
+  }
+  .sidebar-menu li{
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 2rem;
+  }
+  .sidebar-menu a{
+      display: block;
+      padding-left: 1rem;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 30px 0 0 30px;
+  }
+  .sidebar-menu a.active{
+      background: #fff;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      color: #696f7a;
+  }
+  .sidebar-menu a span:first-child{
+      font-size: 1.5rem;
+      padding-right: 1rem;
+  }
+  .sidebar-footer{
+      padding-left: 2.4rem;
+      color: #fff;
+  }
+  .footer-content{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .real{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 0.2rem;
+  }
+  .main-content{
+      margin-left: 345px;
+  }
+  header{
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      position: fixed;
+      left: 345px;
+      width: calc(100% - 345px);
+      top: 0;
+    z-index: 10;
+  }
+  
+  header h2{
+      color: #222;
+  }
+  header label span{
+      font-size: 1.5rem;
+      padding-right: 1rem;
+  }
+  .search{
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      overflow-x: hidden;
+  }
+  .search span{
+      display: inline-block;
+      padding: 0rem 1rem;
+      font-size: 1.5rem;
+  }
+  .search input{
+      height: 100%;
+      padding: .5rem;
+      border: none;
+      outline: none;
+  }
+  .user{
+      display: flex;
+      align-items: center;
+      border-left: solid 1px #ccc;
+  }
+  img{
+      border-radius: 50%;
+      margin-right: 1rem;
+  }
+  .user small{
+      display: inline-block;
+      color: grey;
+      margin-top: -3px;
+  }
+  .drop-down{
+      
+      padding: 1rem;
+      padding-bottom: 1.5rem;
+      color: rgb(139, 139, 139);
+  }
+  .char-setting{
+      display: none;
+  }
+  .drop-down:hover .char-setting{
+      display: block;
+      position: absolute;
+      margin-top: 1.5rem;
+      right: 0;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.021)
+  }
+  .drop-down:hover .char-setting ul{
+      display: block;
+      margin: 10px;
+    
+  }
+  .drop-down:hover .char-setting ul li{
+      width: 174px;
+      padding: 1rem;
+      text-align: left;
+      background: transparent;
+  }
+  .drop-down:hover .char-setting ul li span{
+      padding-right: 1rem;
+      font-size: 1.1rem;
+      color: rgb(37, 37, 37);
+  }
+  main{
+    font-family: 'Poppins', sans-serif;
+      margin-top: 96px;
+      padding: 2rem 2rem;
+      background-color: #f1f5f9;
+      min-height: calc(100vh - 96px);
+  }
+  .cards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 6rem;
+      margin-top: 1rem;
+  }
+  .card-single{
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem;
+      border-radius: 5px;
+  }
+  .card-single .data h1{
+    font-size: 3rem;
+  }
+  .card-single .data span{
+      color: #ccc;
+  }
+  .card-single .las {
+      color: #696f7a;
+      font-size: 5rem;
+  }
+  table{
+      border-collapse: collapse;
+      width: 100%;
+  }
+  .orders{
+      background-color: #fff;
+      margin-top: 3rem;
+      border-radius: 5px;
+      
+  }
+  .padding{
+    padding: 1rem;
+  }
+  .orders .title{
+      border-bottom: 1px solid #f0f0f0;
+  }
+  thead tr{
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+  }
+  thead td{
+      font-weight: 600;
+  }
+  .td-hotel{
+      height: 57px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis   ;
+  }
+  td{
+      padding: 0.5rem 1rem;
+      color: rgb(36, 36, 36);
+  }
+ 
+  .customer{
+      display: flex;
+      align-items: center;
+  }
+  
+  td .status{
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+  }
+  .green{
+      background: rgb(1, 255, 1);
+  }
+  .blue{
+      background: rgb(0, 132, 255);
+  }
+  .orange{
+      background: rgb(255, 153, 0);
+  }
+  .contact{
+      max-width: 0px;
+      font-size: 1.5rem;
+      color: #696f7a;
+  }
+  .accept{
+      padding: 0.6rem 1.2rem;
+      border: none;
+      background-color: #C1E3C4;
+      color: #719D71;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+  }
+  .reject{
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #FFC6CD;
+    color: #fc7e84;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .td-button{
+      max-width: 120px;
+  }
+  .td-hotel{
+      max-width: 200px;
+  }
