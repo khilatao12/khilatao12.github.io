@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "E:\\web"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "web"
+	}
+}

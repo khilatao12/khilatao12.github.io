@@ -34,6 +34,9 @@
     text-align: center;
     justify-content: center;
   }
+  .navbar .fas{
+    font-size: 24px;
+  }
   .logo .fab{
     font-size: 42px;
   }
@@ -236,21 +239,154 @@
     text-align: center;
     font-weight: 600;
   }
-  .end{
+  .book{
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2021/04/best-luxury-hotels-resorts-Maldives.jpeg?fit=1920%2C1080&ssl=1") center/cover no-repeat;
+    color: #fff;
+    padding: 40px 60px;
+    height: 40vh;
+    display: grid;
+}
+.book-form{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 2fr;
+    grid-gap: 24px;
+}
+.form-item{
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
-  .endless a{
-    color: #b9b9b9;
-  }
-  .line{
-    padding-top: 20px;
-    margin: auto;
-    max-width: 1110px;
-    border-bottom: 1px solid #c4c4c4;;
-  }
+    flex-direction: column;
+    justify-content: center;
+}
+.book-form input[type = "submit"]{
+    margin: 18px 0 0 0;
+    background: rgba(0, 0, 0, 0.658);
+    color: #fff;
+    border: 1px solid #fff;
+}
+.book-form label, .book-form input{
+    width: 100%;
+}
+.book-form label{
+    font-weight: 600;
+    word-spacing: 5px;
+    padding-bottom: 8px;
+}
+.book-form input{
+    margin: 4px 0 16px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    border: none;
+    
+}
+.book-form input:focus{
+    outline: 0;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
+.rooms{
+  padding-bottom: 100px;
+}
+.room{
+  margin: 45px 0;
+  padding-bottom: 25px;
+  background: rgb(68, 68, 68);
+  color: #fff;
+  display: flex;
+  padding-bottom: 0;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+.room-text{
+  padding: 5px 20px;
+  flex: 1
+}
+.room-text h3{
+  font-size: 32px;
+  margin-top: 15px;
+}
+.room-text ul{
+  list-style-type: none;
+  margin: 15px 0;
+}
+.room-text ul li{
+  padding: 7px 0;
+}
+.room-text ul li i{
+  color: yellow;
+  margin-right: 10px;
+}
+.rate{
+  opacity: 0.8;
+}
+.rate span{
+  font-size: 40px;
+  font-weight: 900;
+  color: yellow;
+}
+.room-image{
+  overflow: hidden;
+  flex: 1
+}
+.room-image img{
   
+  height: 100%;
+  max-height: 530px;
+}
+.room-image:hover img{
+  transform: scale(1.1);
+}
+.room:nth-child(even){
+  flex-direction: row-reverse;
+}
+.rooms .title h2{
+  position: relative;
+  text-align: center  ;
+  font-weight: 500 ;
+  font-size: 50px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.rooms .title h2::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+.rooms .title h2::after{
+  content: "luxury";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  font-size: 20px;
+  color: #FB9039;
+  padding: 3px;
+  background: rgb(255, 255, 255);
+  transform: translateX(-50%);
+  font-family: 'Source Code Pro', monospace;
+}
+
+.room .btn{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: all 0.7s ease
+}
+.room .btn:hover{
+  background: rgb(143, 143, 143);
+}
+
   footer{
     font-family: 'Poppins', sans-serif;
     bottom: 0px;
