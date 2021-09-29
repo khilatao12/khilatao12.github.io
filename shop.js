@@ -35,7 +35,7 @@ const hotels = JSON.parse(myJSON)
     <div class="content">
         <span>${hot.title}</span>
         <h3>${hot.type}</h3>
-        <a href="#" class="btn">shop now</a>
+        <a href="#" class="btn">book now</a>
     </div>
 </div>`)
 newHotel = newHotels.join('')
