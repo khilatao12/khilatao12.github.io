@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
@@ -14,6 +14,8 @@
     <title>Contact · Maldives</title>
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="loading">Loading&#8230;</div></div>
     <nav class="navbar">
         <div class="logo"><span class="fab fa-ethereum"></span><span>Maldives</span></div>
         <ul class="nav-links">
@@ -98,5 +100,10 @@
         
     </div>
     <script src="contact.js"></script>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 </body>
 </html>

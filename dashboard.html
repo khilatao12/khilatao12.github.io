@@ -23,6 +23,8 @@
     <title>Dashboard</title>
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="loading">Loading&#8230;</div></div>
     <div class="sidebar">
         <div class="maldives">
             <h1><span class="fab fa-ethereum"></span> Maldives</h1>
@@ -215,5 +217,11 @@
         </div>
     </main>
 </div>
+<script src="./dashboard.js"></script>
+<script>
+    $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
 </body>
 </html>

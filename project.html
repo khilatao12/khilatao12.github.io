@@ -23,6 +23,8 @@
 <body>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
+    <div class="loader-wrapper">
+        <div class="loading">Loading&#8230;</div></div>
     <nav class="navbar">
         <div class="logo"><span class="fab fa-ethereum"></span><span>Maldives</span></div>
         <ul class="nav-links">
@@ -198,5 +200,10 @@
         </div>
     </footer>
     <script src="project.js"></script>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 </body>
 </html>
