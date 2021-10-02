@@ -21,6 +21,10 @@
 <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@600;700&display=swap" rel="stylesheet">
 <link rel = "icon" href = "https://s2.coinmarketcap.com/static/img/coins/200x200/1027.png" type = "image/x-icon"> 
@@ -67,18 +71,18 @@
         <div class="login">
             <div class="login-field">
                 <i class="fa fa-envelope login-icon"></i>
-                <input type="text" class="login-input" placeholder="Email">
+                <input type="text" class="login-input" placeholder="Email" id="email">
             </div>
             <div class="login-field">
                 <i class="fa fa-lock login-icon"></i>
-                <input type="password" class="login-input" placeholder="Password">
+                <input type="password" class="login-input" placeholder="Password" id="password">
             </div>
             <div class="login-field">
                 <i class="fa fa-lock login-icon"></i>
                 <input type="password" class="login-input" placeholder="Confirm Password">
             </div>
             <p class="register">By submitting the form you agree to our <span class="term">Terms of Service</span></p>
-            <button class="submit">Sign Up  </button></div>
+            <button class="submit" onclick="signUp()">Sign Up  </button></div>
         </div>
     </div>
     <footer>
@@ -134,5 +138,6 @@
           $(".loader-wrapper").fadeOut("slow");
         });
     </script>
+    
 </body>
 </html>
