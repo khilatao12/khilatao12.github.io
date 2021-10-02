@@ -133,7 +133,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } 
   .sidebar{
     width: 345px;
     position: fixed;
@@ -146,6 +146,10 @@
       height: 90px;
       padding: 1rem 0rem 1rem 2rem;
       color: #fff;
+  }
+  .maldives h1{
+    font-family: 'Oranienbaum', serif;
+    letter-spacing: 0.2rem;
   }
   .sidebar span{
       display: inline-block;
@@ -369,8 +373,16 @@
   }
   .contact{
       max-width: 0px;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       color: #696f7a;
+  }
+  .contact span{
+    cursor: pointer;
+    padding: 1px;
+    transition: 0.2s ease;
+  }
+  .contact span:hover{
+    transform: translateY(-0.5rem);
   }
   .accept{
       padding: 0.6rem 1.2rem;
