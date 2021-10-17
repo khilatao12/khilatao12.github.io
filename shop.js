@@ -1,3 +1,4 @@
+
 const myJSON = `[{"img":"https://thienduongmaldives.com/wp-content/uploads/2019/09/193995542-1200x800.jpg","title":"Hard Rock Hotel","type":"Hotel"},
 {"img":"https://q-xx.bstatic.com/xdata/images/hotel/840x460/264010334.jpg?k=349e902b6c66d2eb044dedbc34ab498d42d036742dc3c9e6edd886a9404323e4&o=","title":"Sheraton Maldives Full Moon","type":"Resort"}]`
 $(document).ready(function () {
@@ -59,7 +60,14 @@ const sweetAlert = (icon, title) => {
         title: title,
     });
 };
-
+let user1 = ""
+let currentUser = async () => {
+    await firebase.auth().onAuthStateChanged((user) => {
+        user1 = user.email
+    }
+    )
+}
+currentUser()
 
 let getDataFromDoc = (doc) => {
     let data = doc.data()
@@ -76,20 +84,40 @@ let getDataFromDocs = (docs) => {
     }
     return result
 }
+// let getData = async () => {
+//     let result = await firebase.firestore().collection("room").get()
+//     let data = getDataFromDocs(result.docs)
+//     setTimeout(function (hotelname) {
+//         let btns = Array.from(document.getElementsByClassName("btn"))
+//         console.log(btns)
+//         btns.forEach(btn => {
+//             btn.addEventListener('click', () => {
+//                 let x = btn.id
+//                 hotelname = data[x].name
+//                 console.log(hotelname);
+//             })
+//         })
+
+//     }, 1500)
+
+// }
+// getData()
 
 let availableRoom = async () => {
     let result = await firebase.firestore().collection("room").get()
     let data = getDataFromDocs(result.docs)
-    console.log(data);
     render(data)
 }
 availableRoom()
-
+let booked = ()=>{
+    sweetAlert("error","Phòng này đã được book")
+}
+let hotel = []
 let render = (data) => {
     let dom = document.querySelector(".rooms-container")
     for (let i = 0; i < data.length; i++) {
         if (`${data[i].status}` == "active") {
-            let html = ` <article class="room">
+            let html = ` <article class="room room-${i}">
         <div class="room-image">
             <img src="${data[i].img}"
                 alt="room image">
@@ -103,13 +131,13 @@ let render = (data) => {
             <p class="rate">
                 <span>$${data[i].price} /</span> Per Night
             </p>
-            <button type="button" class="btn">book now</button>
+            <button type="button" class="btn" id="c${i}">book now</button>
         </div>
     </article>`
             dom.innerHTML += html
         }
         else {
-            let html = ` <article class="room">
+            let html = ` <article class="room room-${i}">
         <div class="room-image">
             <img src="${data[i].img}"
                 alt="room image">
@@ -123,13 +151,20 @@ let render = (data) => {
             <p class="rate">
                 <span>$${data[i].price} /</span> Per Night
             </p>
-            <button type="button" class="btn">book now</button>
+            <button type="button" class="btn" id="c${i}" onclick="booked()">book now</button>
         </div>
     </article>`
             dom.innerHTML += html
         }
     }
+    for (let i = 0; i < data.length; i++) {
+        document.querySelector(`#c${i}`).addEventListener("click", () => {
+            hotel.push(`${data[i].name}`)
+            getInfo(data[i].name)
+        })
+    }
 }
+
 let renderBenefit = (data) => {
     let html = ""
     for (let i = 0; i < data.length; i++) {
@@ -141,3 +176,68 @@ let renderBenefit = (data) => {
     }
     return html
 }
+
+let checkLogin = async () => {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            sweetAlert("success", user.email)
+        } else {
+            sweetAlert("error", "Please signin")
+            setTimeout(function () { open("./login.html", "_self"); }, 1000);;
+        }
+
+    }
+    )
+}
+
+let signOut = () => {
+    firebase
+        .auth()
+        .signOut()
+        .then(() => {
+            open("./login.html", "_self");
+        })
+        .catch((error) => {
+            sweetAlert("error", error.message);
+        });
+};
+
+let booking = document.querySelector(".booking")
+booking.onclick = (e) => {
+    e.preventDefault()
+    checkLogin()
+
+}
+
+let updateDashboard = async (user, hotel, date1) => {
+    if (user || hotel || date1) {
+        console.log(user);
+        console.log(hotel);
+        console.log(date1);
+        await firebase.firestore().collection("dashboard").add({
+            username: user,
+            hotelname: hotel,
+            date: date1,
+        })
+        sweetAlert("success", "Booking thành công")
+        setTimeout(function(){
+            open("./shop.html","_self")
+        },1000)
+    }
+    else {
+        sweetAlert("error", "Kiểm tra lại thông tin")
+    }
+}
+let getInfo = (hotelname) => {
+    let username = user1
+    if (document.querySelector("#checkin").value == "" || document.querySelector("#checkout").value == "") {
+        sweetAlert("error", "Điền đầy đủ thông tin")
+    } else {
+        checkInDate = document.querySelector("#checkin").value
+        checkOutDate = document.querySelector("#checkout").value
+    }
+    let date = checkInDate + " đến " + checkOutDate
+
+    updateDashboard(username, hotelname, date)
+}
+

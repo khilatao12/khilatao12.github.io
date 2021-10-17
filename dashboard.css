@@ -392,11 +392,29 @@ thead td {
 }
 
 td {
+    max-width: 380px !important;
     padding: 0.5rem 1rem;
     color: rgb(36, 36, 36);
+    
 }
-
+.fa-times{
+    color: red;
+    margin-left: 80px;
+    font-size: 1.3rem;
+}
+.fa-check{
+    color: green;
+    margin-left: 80px;
+    font-size: 1.3rem;
+}
+.disapere{
+    display: none;
+}
+.appear{
+    display: inline;
+}
 .customer {
+    min-height: 100px;
     display: flex;
     align-items: center;
 }

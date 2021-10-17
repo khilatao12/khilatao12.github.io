@@ -29,7 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="https://s2.coinmarketcap.com/static/img/coins/200x200/1027.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
@@ -65,6 +65,9 @@
             </li>
             <li>
                 <a href="login.html" class="fas fa-sign-in-alt"></a>
+            </li>
+            <li>
+                <a href="#" class="fas fa-sign-in-alt" onclick="signOut()"></a>
             </li>
         </ul>
 
@@ -162,11 +165,11 @@
             <form class="book-form">
                 <div class="form-item">
                     <label for="checkin-date">Check In Date: </label>
-                    <input type="date">
+                    <input type="date" id="checkin">
                 </div>
                 <div class="form-item">
                     <label for="checkout-date">Check Out Date: </label>
-                    <input type="date">
+                    <input type="date" id="checkout">
                 </div>
                 <div class="form-item">
                     <label for="adult">Adults: </label>
@@ -181,7 +184,7 @@
                     <input type="number" min="1" value="1">
                 </div>
                 <div class="form-item">
-                    <input type="submit" class="btn" value="Book Now">
+                    <button type="text" class="btn booking">Book Now</button>
                 </div>
             </form>
         </div>
