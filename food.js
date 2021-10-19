@@ -42,3 +42,18 @@ $(document).ready(function () {
         });
     });
 });
+let setLi = async () => {
+
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            let log = document.querySelector("#account")
+            log.innerHTML = `<a href="#" onclick="signOut()">SignOut</a>`
+
+        } else {
+            let log = document.querySelector("#account")
+            log.innerHTML = `<a href="login.html">SignIn</a>`
+        }
+    }
+    )
+}
+setLi()

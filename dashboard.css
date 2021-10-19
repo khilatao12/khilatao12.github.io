@@ -390,8 +390,12 @@ thead td {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
+.id{
+    overflow: hidden;
+    width: 50px !important  ;
+}
 td {
+    overflow: hidden;
     max-width: 380px !important;
     padding: 0.5rem 1rem;
     color: rgb(36, 36, 36);

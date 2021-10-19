@@ -109,9 +109,9 @@ let availableRoom = async () => {
     render(data)
 }
 availableRoom()
-let booked = ()=>{
-    sweetAlert("error","Phòng này đã được book")
-}
+// let booked = ()=>{
+//     sweetAlert("error","Phòng này đã được book")
+// }
 let hotel = []
 let render = (data) => {
     let dom = document.querySelector(".rooms-container")
@@ -151,17 +151,24 @@ let render = (data) => {
             <p class="rate">
                 <span>$${data[i].price} /</span> Per Night
             </p>
-            <button type="button" class="btn" id="c${i}" onclick="booked()">book now</button>
+            <button type="button" class="btn" id="c${i}">book now</button>
         </div>
     </article>`
             dom.innerHTML += html
         }
     }
     for (let i = 0; i < data.length; i++) {
-        document.querySelector(`#c${i}`).addEventListener("click", () => {
-            hotel.push(`${data[i].name}`)
-            getInfo(data[i].name)
-        })
+        if (`${data[i].status}` == "active") {
+            document.querySelector(`#c${i}`).addEventListener("click", () => {
+                hotel.push(`${data[i].name}`)
+                getInfo(data[i].name, data[i].id)
+            })
+        }
+        else {
+            document.querySelector(`#c${i}`).addEventListener("click", () => {
+                sweetAlert("error", "Phòng này đã được book")
+            })
+        }
     }
 }
 
@@ -180,7 +187,7 @@ let renderBenefit = (data) => {
 let checkLogin = async () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            sweetAlert("success", user.email)
+
         } else {
             sweetAlert("error", "Please signin")
             setTimeout(function () { open("./login.html", "_self"); }, 1000);;
@@ -189,7 +196,21 @@ let checkLogin = async () => {
     }
     )
 }
+let setLi = async () => {
 
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            let log = document.querySelector("#account")
+            log.innerHTML = `<a href="#" onclick="signOut()">SignOut</a>`
+
+        } else {
+            let log = document.querySelector("#account")
+            log.innerHTML = `<a href="login.html">SignIn</a>`
+        }
+    }
+    )
+}
+setLi()
 let signOut = () => {
     firebase
         .auth()
@@ -206,10 +227,11 @@ let booking = document.querySelector(".booking")
 booking.onclick = (e) => {
     e.preventDefault()
     checkLogin()
+    scrollBooking()
 
 }
 
-let updateDashboard = async (user, hotel, date1) => {
+let updateDashboard = async (user, hotel, date1, id) => {
     if (user || hotel || date1) {
         console.log(user);
         console.log(hotel);
@@ -218,17 +240,19 @@ let updateDashboard = async (user, hotel, date1) => {
             username: user,
             hotelname: hotel,
             date: date1,
+            status: "pending",
+            idRoom: id
         })
         sweetAlert("success", "Booking thành công")
-        setTimeout(function(){
-            open("./shop.html","_self")
-        },1000)
+        setTimeout(function () {
+            open("./shop.html", "_self")
+        }, 1000)
     }
     else {
         sweetAlert("error", "Kiểm tra lại thông tin")
     }
 }
-let getInfo = (hotelname) => {
+let getInfo = (hotelname, id) => {
     let username = user1
     if (document.querySelector("#checkin").value == "" || document.querySelector("#checkout").value == "") {
         sweetAlert("error", "Điền đầy đủ thông tin")
@@ -238,6 +262,10 @@ let getInfo = (hotelname) => {
     }
     let date = checkInDate + " đến " + checkOutDate
 
-    updateDashboard(username, hotelname, date)
+    updateDashboard(username, hotelname, date, id)
 }
 
+let scrollBooking = () => {
+    let scroll = document.querySelector("#rooms")
+    scroll.scrollIntoView();
+}
