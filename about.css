@@ -1,0 +1,480 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navbar{
+    padding: 25px 0;
+      width: 100%;
+      position: fixed;
+      display: flex;
+      z-index: 999;
+      justify-content: space-around;
+      align-items: center;
+      transition: all 0.4s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar.sticky{
+    padding: 8px 0;
+    background-color:#696f7a   ;
+    }
+    .logo{
+      color: rgb(243, 243, 243);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 36px;
+      font-family: 'Oranienbaum', serif;
+      cursor: pointer;
+      text-align: center;
+      justify-content: center;
+    }
+    .logo .fab{
+      font-size: 42px;
+    }
+    .nav-links{
+      display: flex;
+      justify-content: space-around;
+      width: 30%;
+      position: relative;
+    }
+    .nav-links li{
+      list-style: none;
+      
+    }
+    .nav-links a{
+      color: white;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+    .nav-links a:hover{
+    color: #FB9039;
+    }
+
+    .main{
+        display: flex;
+        background: url("https://images.unsplash.com/photo-1544933863-582aca697094?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2133&q=80") no-repeat center;
+        height: 100vh;
+        width: 1920;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        max-height: 700px;
+        justify-content: center;
+        align-items: center;
+      }
+      .main .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #212529;
+        max-height: 700px;
+        opacity: .5;
+        z-index: 1;
+      }
+      
+      .main .fullcontent{
+        z-index: 2;
+       padding: 320px 520px 200px 520px;
+      }
+      
+      .main .fullcontent .text-1{
+        font-size: 45px;
+        font-weight: 600;
+        font-family: 'Kanit', sans-serif;
+
+      }
+      .main .fullcontent .text-2{
+        font-size: 28px;
+        font-weight: 400;
+        margin: 10px 0 20px;
+        font-family: 'Kanit', sans-serif;
+        
+        
+      }
+      .main .fullcontent .text-3{
+        font-size: 24px;
+        font-style: italic;
+        font-family: Lora,'Times New Roman',serif;
+      }
+      .history{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 0;
+      
+      }
+      .history h2{
+        position: relative;
+        text-align: center  ;
+        font-weight: 500 ;
+        font-size: 50px;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      .history h2::before{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 150px;
+        height: 3px;
+        background: #111;
+        transform: translateX(-50%);
+      }
+      .history h2::after{
+        content: "maldives";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        font-size: 20px;
+        color: #FB9039;
+        padding: 3px;
+        background: rgb(255, 255, 255);
+        transform: translateX(-50%);
+        font-family: 'Source Code Pro', monospace;
+      
+        
+      }
+      .max-width{
+          max-width: 1300px;
+          padding: 0 80px;
+          margin: auto;
+      }
+      .history .history-content{
+          font-size: 20px;
+      }
+      .history .history-content p{
+          line-height: 1.5;
+          margin: 30px 0;
+      }
+      .image{
+          background: url('https://images.unsplash.com/photo-1545556124-1e664bc6da2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2090&q=80') center no-repeat;
+          width: 100%;
+          height: 100vh;
+          max-height: 600px;
+          background-size: cover;
+             background-attachment: fixed;
+             filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+      }
+      .economy{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 0;
+      
+      }
+      .economy h2{
+        position: relative;
+        text-align: center  ;
+        font-weight: 500 ;
+        font-size: 50px;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      .economy h2::before{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 150px;
+        height: 3px;
+        background: #111;
+        transform: translateX(-50%);
+      }
+      .economy h2::after{
+        content: "maldives";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        font-size: 20px;
+        color: #FB9039;
+        padding: 3px;
+        background: rgb(255, 255, 255);
+        transform: translateX(-50%);
+        font-family: 'Source Code Pro', monospace;
+      }
+    .economy .economy-content{
+        font-size: 20px;
+    }
+    .economy .economy-content p{
+        line-height: 1.5;
+        margin: 30px 0;
+    }
+    .image1{
+        background: url('https://images.unsplash.com/photo-1530462567120-3e3d48284bd1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2090&q=80') center no-repeat;
+        width: 100%;
+        height: 100vh;
+        max-height: 600px;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    }
+    .culture{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 0;
+      
+      }
+      .culture h2{
+        position: relative;
+        text-align: center  ;
+        font-weight: 500 ;
+        font-size: 50px;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      .culture h2::before{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 150px;
+        height: 3px;
+        background: #111;
+        transform: translateX(-50%);
+      }
+      .culture h2::after{
+        content: "maldives";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        font-size: 20px;
+        color: #FB9039;
+        padding: 3px;
+        background: rgb(255, 255, 255);
+        transform: translateX(-50%);
+        font-family: 'Source Code Pro', monospace;
+      }
+    .culture .culture-content{
+        font-size: 20px;
+    }
+    .culture .culture-content p{
+        line-height: 1.5;
+        margin: 30px 0;
+    }
+    .image2{
+        background: url('https://images.unsplash.com/photo-1603901698840-eb8548545389?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1939&q=80') center no-repeat;
+        width: 100%;
+        height: 100vh;
+        max-height: 600px;
+        background-size: cover;
+           background-attachment: fixed;
+           filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    }
+    .climate{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 0;
+      
+      }
+      .climate h2{
+        position: relative;
+        text-align: center  ;
+        font-weight: 500 ;
+        font-size: 50px;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      .climate h2::before{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 150px;
+        height: 3px;
+        background: #111;
+        transform: translateX(-50%);
+      }
+      .climate h2::after{
+        content: "maldives";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        font-size: 20px;
+        color: #FB9039;
+        padding: 3px;
+        background: rgb(255, 255, 255);
+        transform: translateX(-50%);
+        font-family: 'Source Code Pro', monospace;
+      }
+    .climate .climate-content{
+        font-size: 20px;
+    }
+    .climate .climate-content p{
+        line-height: 1.5;
+        margin: 30px 0;
+    }
+
+    footer{
+        font-family: 'Poppins', sans-serif;
+        bottom: 0px;
+        width: 100%;
+        background: #111;
+      }
+      .main-footer{
+        color: white;
+        display: flex;
+      
+      }
+      .left-box , .right-box {
+        flex-basis: 50%;
+        padding: 30px 100px  ;
+      }
+      .center-box{
+        flex-basis: 50%;
+        padding: 30px 10px 30px 60px;
+      }
+      .content{
+        margin-top: 20px;
+        position: relative;
+      }
+      .center-box .content:before{
+        position: absolute;
+        content: '';
+        top: -10px;
+        height: 2px;
+        width: 100%;
+        background: #1a1a1a;
+      }
+      .center-box .content:after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 25%;
+        background: #f12020;
+        top: -10px;
+      }.right-box .content:before{
+        position: absolute;
+        content: '';
+        top: -10px;
+        height: 2px;
+        width: 100%;
+        background: #1a1a1a;
+      }
+      .right-box .content:after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 20%;
+        background: #f12020;
+        top: -10px;
+      }.left-box .content:before{
+        position: absolute;
+        content: '';
+        top: -10px;
+        height: 2px;
+        width: 100%;
+        background: #1a1a1a;
+      }
+      .left-box .content:after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 20%;
+        background: #f12020;
+        top: -10px;
+      }
+      .social{
+        margin-top: 20px;
+      }
+      .social a{
+        padding: 4px;
+        color: white;
+        font-size: 25px;
+      }
+      .social span{
+        height: 40px;
+      width: 40px;
+      background: #1a1a1a;
+      line-height: 40px;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: 0.3s;
+      }
+      .social span:hover{
+        background-color: rgba(134, 182, 224, 0.726);
+      }
+      .center-box .content .fas{
+        font-size: 1.4375rem;
+      background: #1a1a1a;
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+      text-align: center;
+      border-radius: 50%;
+      transition: 0.3s;
+      cursor: pointer;
+      }
+      .center-box .content .fas:hover{
+        background: rgba(134, 182, 224, 0.726);
+      }
+      .center-box .content .text{
+        font-size: 1.0625rem;
+        font-weight: 500;
+        padding-left: 10px;
+      }
+      .center-box .content .phone{
+        margin: 15px 0;
+      }
+      .right-box .content a{
+          text-decoration: none;
+          color: white;
+      }
+      .right-box .content a:hover{
+        text-decoration: underline;
+      }
+      ::-webkit-scrollbar{
+        width: 0px;
+        z-index: 500;
+      }
+      #scrollPath{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        background: rgba(255,255,255,0.05);
+        z-index: 800;
+      }
+      #progressbar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 5px;
+        z-index: 1000;
+        background: linear-gradient(to top,#008aff,#00ffe7);
+        animation: animate 5s linear infinite;
+      }
+      @keyframes animate{
+        0%,100%{
+          filter: hue-rotate(0deg)
+        }
+        50%{
+          filter: hue-rotate(360deg);
+        }
+      }
+      #progressbar::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff,#00ffe7);
+        filter: blur(3px);
+      }
+      #progressbar::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff,#00ffe7);
+        filter: blur(5px);
+      }

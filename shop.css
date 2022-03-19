@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.max-width{
+  max-width: 1390px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar{
+  padding: 25px 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.4s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navbar.sticky{
+  padding: 8px 0;
+  background-color:#696f7a  ;
+  }
+  .logo{
+    color: rgb(243, 243, 243);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 36px;
+    font-family: 'Oranienbaum', serif;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+  }
+  .logo .fab{
+    font-size: 42px;
+  }
+  .nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    position: relative;
+  }
+  .nav-links li{
+    list-style: none;
+    
+  }
+  .nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  .nav-links a:hover{
+    color: #FB9039;
+  }
+  body{
+      font-family: "Montserrat", sans-serif;
+  }
+
+  a{
+      text-decoration: none;
+  }
+  .max-width1{
+    max-width: 1600px;
+    padding: 0 80px;
+    margin: auto;
+  }
+  .hero{
+      display: flex;
+      width: 100%;
+      height: 115vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1516815231560-8f41ec531527?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80") center no-repeat;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  .main{
+      font-size: 6rem;
+      font-family: 'Langar', cursive;
+      color: rgb(255, 238, 0);
+      
+  }
+  .hero .quality{
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #e2e2d9;
+      
+  }
+
+  .hero .title{
+      font-size: 5rem;
+      font-family: "Cormorant Garamond";
+      color: #fff;
+  }
+  .login{
+   
+    text-align: center;
+    margin: auto;
+    padding: 56px 0;
+    
+  }
+  .login a{
+    color: #0770cd;
+  }
+  .login a:hover{
+    color: #5493ca;
+  }
+  .login .line{
+    padding-top: 50px;
+    margin: auto;
+    max-width: 1200px;
+    border-bottom: 1px solid #dadada;;
+  }
+  .banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    
+  }
+  
+  .banner-container .banner{
+    flex:1 1 40rem;
+    height:25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .banner-container .banner .content{
+    position: absolute;
+    top:50%; left: 4%;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  
+  .banner-container .banner img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+  }
+  
+  .banner-container .banner .content span{
+    color:rgb(255, 255, 255);
+    font-size:1.7rem;
+  }
+  
+  .banner-container .banner .content h3{
+    color:rgb(255, 255, 255);
+    font-size:3rem;
+  }
+  .banner-container .banner:hover .content{
+    opacity: 1;
+  }
+  .banner-container .banner:hover img{
+    transform: scale(1.2);
+  }
+  .deal{
+    padding-top: 60px;
+  }
+  .heading{
+    font-size: 3rem;
+    color:#444;
+    padding-left: 1rem;
+    border-left: .4rem solid rgb(0, 117, 172);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .deal .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+  }
+  
+  .deal .row .image{
+    flex:1 1 20rem;
+  }
+  
+  .deal .row .image img{
+    width:75%;
+    transform: rotate(10deg);
+  }
+  
+  .deal .row .content{
+    flex:1 1 40rem;
+  }
+  
+  .deal .row .content .title{
+    font-size: 3.5rem;
+    margin-top: -55px;
+    color:#333;
+  }
+  
+  .deal .row .content p{
+    font-size: 1.5rem;
+    color:#666;
+    padding:1rem 0;
+  }
+  
+  .deal .row .content .count-down{
+    display: flex;
+    padding:1rem 0;
+    gap:1.5rem;
+  }
+  
+  .deal .row .content .count-down .box{
+    width:9rem;
+    text-align: center;
+    border:.1rem solid rgba(0,0,0,.3);
+  }
+  
+  .deal .row .content .count-down .box h3{
+    font-size: 5rem;
+    color:#333;
+  }
+  
+  .deal .row .content .count-down .box span{
+    font-size: 1.7rem;
+    color:#fff;
+    display: block;
+    background:#666;
+    padding:.5rem;
+  }
+  .head1{
+    margin-top: 30px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .end{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  .endless a{
+    color: #b9b9b9;
+  }
+  .line{
+    padding-top: 20px;
+    margin: auto;
+    max-width: 1110px;
+    border-bottom: 1px solid #c4c4c4;;
+  }
+  
+  footer{
+    font-family: 'Poppins', sans-serif;
+    bottom: 0px;
+    width: 100%;
+    background: #111;
+  }
+  .main-footer{
+    color: white;
+    display: flex;
+  
+  }
+  .left-box , .right-box {
+    flex-basis: 50%;
+    padding: 30px 100px  ;
+  }
+  .center-box{
+    flex-basis: 50%;
+    padding: 30px 10px 30px 60px;
+  }
+  .content{
+    margin-top: 20px;
+    position: relative;
+  }
+  .center-box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  .center-box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 25%;
+    background: #f12020;
+    top: -10px;
+  }.right-box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  .right-box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20%;
+    background: #f12020;
+    top: -10px;
+  }.left-box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  .left-box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20%;
+    background: #f12020;
+    top: -10px;
+  }
+  .social{
+    margin-top: 20px;
+  }
+  .social a{
+    padding: 4px;
+    color: white;
+    font-size: 25px;
+  }
+  .social span{
+    height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+  }
+  .social span:hover{
+    background-color: rgba(134, 182, 224, 0.726);
+  }
+  .center-box .content .fas{
+    font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  }
+  .center-box .content .fas:hover{
+    background: rgba(134, 182, 224, 0.726);
+  }
+  .center-box .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .center-box .content .phone{
+    margin: 15px 0;
+  }
+  .right-box .content a{
+      text-decoration: none;
+      color: white;
+  }
+  .right-box .content a:hover{
+    text-decoration: underline;
+  }
+  
+  .home{
+    padding-top: 0;
+    margin-top: -40px;
+    
+  }
+  
+  .home .home-slider{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-top: 0;
+    border-radius: 7px;
+  }
+  
+  .home .home-slider .box{
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 55rem;
+    position: relative;
+  }
+  .home .home-slider .box1{
+    background: url("https://pix10.agoda.net/hotelImages/1602985/-1/c1f7779fb76cb8c3d8a082700acc8138.jpg?s=1024x768") center no-repeat;
+    
+  }
+  .home .home-slider .box2{
+    background: url("https://pix10.agoda.net/hotelImages/5710451/0/05b25dde1a732512688edcfb0ab26dad.jpg?s=1024x768") center no-repeat;
+  }
+  .home .home-slider .box3{
+    background: url("https://q-xx.bstatic.com/images/hotel/max1024x768/257/257145826.jpg") center no-repeat;
+  }
+  .home .home-slider .box1:hover{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://pix10.agoda.net/hotelImages/1602985/-1/c1f7779fb76cb8c3d8a082700acc8138.jpg?s=1024x768") center no-repeat;
+  }
+  .home .home-slider .box2:hover{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://pix10.agoda.net/hotelImages/5710451/0/05b25dde1a732512688edcfb0ab26dad.jpg?s=1024x768") center no-repeat;
+  }
+  .home .home-slider .box3:hover{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://q-xx.bstatic.com/images/hotel/max1024x768/257/257145826.jpg") center no-repeat;
+  }
+  .home .home-slider .box .content{
+    position: absolute;
+    top:50%; left: 5%;
+    transform: translateY(-50%);
+    max-width: 50rem;
+    opacity: 0;
+  }
+  .home .home-slider .box1:hover .content{
+    opacity: 1;
+  }
+  .home .home-slider .box2:hover .content{
+    opacity: 1;
+  }
+  .home .home-slider .box3:hover .content{
+    opacity: 1;
+  }
+  .home .home-slider .box .content span{
+    font-size: 3rem;
+    color:rgb(250, 250, 250);
+  }
+  
+  .home .home-slider .box .content h3{
+    font-size: 6rem;
+    color:rgb(255, 255, 255);
+    padding:.5rem 0;
+  }
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:gray;
+    color:#fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background:#333;
+  }
+
+
+
+  ::-webkit-scrollbar{
+    width: 0px;
+    z-index: 500;
+  }
+  #scrollPath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    z-index: 800;
+  }
+  #progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    z-index: 1000;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animate{
+    0%,100%{
+      filter: hue-rotate(0deg)
+    }
+    50%{
+      filter: hue-rotate(360deg);
+    }
+  }
+  #progressbar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(3px);
+  }
+  #progressbar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(5px);
+  }
